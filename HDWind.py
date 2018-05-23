@@ -48,7 +48,7 @@ def run(path_datos, path_stations):
         df['date'] = name
         df = pd.merge(df, stations, how='left', on=['lat', 'lon'])
         hdwind = hdwind.append(df)
-    hdwind.to_csv('ceaza2cerrogrande.csv', index=False)
+    hdwind.to_csv('laSerena_WRF-HDWM.csv', index=False)
 
 
 if __name__ == "__main__":
