@@ -9,8 +9,8 @@ import plotly.graph_objs as go
 from plotly.offline import plot
 import random
 
-COLOR_OBSERVED = ["#f7fbff","#e1edf8","#cbdff1","#acd0e6","#82bbdb","#59a2cf","#3587c1","#1b6ab0","#094d96","#08306b"]
-COLOR_MODELED = ["#f7f4f9","#e9e3f0","#d7c2df","#cca1ce","#d57cbd","#e34fa0","#e01f78","#c20d52","#93003e","#67001f"]
+COLOR_OBSERVED = ["#f7fbff", "#e1edf8", "#cbdff1", "#acd0e6", "#82bbdb", "#59a2cf", "#3587c1", "#1b6ab0", "#094d96", "#08306b"]
+COLOR_MODELED = ["#f7f4f9", "#e9e3f0", "#d7c2df", "#cca1ce", "#d57cbd", "#e34fa0", "#e01f78", "#c20d52", "#93003e", "#67001f"]
 DIRECTIONS_CATEGORICAL = np.array('N NNE NE ENE E ESE SE SSE S SSW SW WSW W WNW NW NNW N'.split())
 DIRECTIONS_NUMERICAL = np.arange(11.25, 372, 22.5)
 
