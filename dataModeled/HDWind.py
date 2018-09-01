@@ -12,13 +12,15 @@ HDWM_OPT_DATA = os.environ['HDWM_OPT_DATA']
 OUTPUT = os.environ['OUTPUT']
 OUTPUT_FILE = os.environ['OUTPUT_FILE']
 
-
 def run(path_datos, path_stations):
     """dataframe in csv format, datum WGS84, epsg:4326:
         header: date,lat,lon,name,wind_dir,wind_speed
     """
     data = pd.read_csv(path_datos, parse_dates=['date'])
+    name_path_datos, extension_file = path_datos.split("/").pop().split(".")
     stations = pd.read_csv(path_stations)
+    stations['lat'] = stations['lat'].astype(str)
+    stations['lon'] = stations['lon'].astype(str)
     HEIGHT = 10
     data['height'] = HEIGHT
     data = data.sort_values('date')
@@ -46,14 +48,18 @@ def run(path_datos, path_stations):
         os.system(HDWM_OPT + "/HDWM")
         df = pd.read_csv(OUTPUT_FILE)
         df['date'] = name
+        df['lat'] = df['lat'].astype(str)
+        df['lon'] = df['lon'].astype(str)
         df = pd.merge(df, stations, how='left', on=['lat', 'lon'])
         hdwind = hdwind.append(df)
-    hdwind.to_csv('laSerena_WRFDA-HDWM.csv', index=False)
+    hdwind.to_csv(name_path_datos+'-HDWM.csv', index=False)
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(prog='data-HDWind-data', description='input data to HDWind model and output data')
-    parser.add_argument('-d', default=os.getcwd(), help='dir to input data csv ')
+    parser = argparse.ArgumentParser(
+        prog='data-HDWind-data', description='input data to HDWind model and output data')
+    parser.add_argument('-d', default=os.getcwd(),
+                        help='dir to input data csv ')
     parser.add_argument('-s', help='csv with stations data: lon,lat,name')
     args = parser.parse_args()
     run(args.d, args.s)

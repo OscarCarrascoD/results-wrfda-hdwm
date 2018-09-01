@@ -1,0 +1,14 @@
+\begin{tabular}{lrrrrrr}
+\toprule
+                          DataSet &  Mean Bias Vel. &  Mean Bias Dir. &  Mean Error Vel. &  Mean Error Dir. &  RMSE Vel &   RMSE Dir \\
+\midrule
+               ceaza wrf-analysis &        1.017863 &       69.226346 &         1.210820 &        69.226346 &  1.531075 &  88.677134 \\
+       ceaza wrf-analysis\_2P-HDWM &        0.181253 &       72.259276 &         0.660847 &        72.259276 &  0.842007 &  91.087456 \\
+       ceaza wrf-analysis\_4P-HDWM &        0.065099 &       73.971919 &         0.649744 &        73.971919 &  0.819802 &  92.612054 \\
+       ceaza wrf-analysis\_8P-HDWM &        0.103942 &       75.697849 &         0.681318 &        75.697849 &  0.858681 &  94.363334 \\
+         cerrogrande wrf-analysis &        0.434352 &       72.051319 &         0.946294 &        72.051319 &  1.233298 &  89.762410 \\
+ cerrogrande wrf-analysis\_2P-HDWM &        0.549489 &       71.476582 &         0.965161 &        71.476582 &  1.254988 &  89.412028 \\
+ cerrogrande wrf-analysis\_4P-HDWM &        0.516036 &       69.242394 &         0.961153 &        69.242394 &  1.261162 &  87.074993 \\
+ cerrogrande wrf-analysis\_8P-HDWM &        0.463320 &       67.018122 &         0.977539 &        67.018122 &  1.305979 &  84.671295 \\
+\bottomrule
+\end{tabular}

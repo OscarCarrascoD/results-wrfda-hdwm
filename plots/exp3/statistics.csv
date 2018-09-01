@@ -1,0 +1,14 @@
+\begin{tabular}{lrrrrrr}
+\toprule
+                          DataSet &  Mean Bias Vel. &  Mean Bias Dir. &  Mean Error Vel. &  Mean Error Dir. &  RMSE Vel &   RMSE Dir \\
+\midrule
+               ceaza wrf-forecast &        0.874929 &       66.667114 &         1.152081 &        66.667114 &  1.440122 &  85.681947 \\
+       ceaza wrf-forecast\_2P-HDWM &        0.082859 &       69.895005 &         0.675155 &        69.895005 &  0.843082 &  88.408160 \\
+       ceaza wrf-forecast\_4P-HDWM &        0.007059 &       71.786242 &         0.658766 &        71.786242 &  0.815607 &  90.191663 \\
+       ceaza wrf-forecast\_8P-HDWM &        0.026983 &       73.670689 &         0.706301 &        73.670689 &  0.867994 &  92.404545 \\
+         cerrogrande wrf-forecast &        0.280791 &       70.066781 &         0.931373 &        70.066781 &  1.203019 &  88.376744 \\
+ cerrogrande wrf-forecast\_2P-HDWM &        0.399048 &       69.680330 &         0.937738 &        69.680330 &  1.200743 &  88.307818 \\
+ cerrogrande wrf-forecast\_4P-HDWM &        0.329333 &       67.161963 &         0.926063 &        67.161963 &  1.195566 &  84.954091 \\
+ cerrogrande wrf-forecast\_8P-HDWM &        0.238277 &       63.950582 &         0.919877 &        63.950582 &  1.188892 &  80.641311 \\
+\bottomrule
+\end{tabular}
